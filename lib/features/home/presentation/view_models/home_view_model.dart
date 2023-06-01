@@ -1,5 +1,6 @@
 import 'package:athaan/features/home/data/models/athaan_model.dart';
 import 'package:athaan/features/home/data/services/athaan_service.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeViewModel {
   late String cityName;
@@ -11,7 +12,4 @@ class HomeViewModel {
   late String isha;
   late AthaanModel athaanModel;
   AthaanService athaanService = AthaanService();
-  void getData() async {
-    athaanModel = await athaanService.getAthaanModel(cityName: cityName);
-  }
 }
