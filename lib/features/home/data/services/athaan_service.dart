@@ -9,7 +9,7 @@ class AthaanService {
   AthaanModel? athaanModel;
 
   //Dio Method
-  Future<AthaanModel> getAthaanModel({String cityName = "aleppo"}) async {
+  Future<AthaanModel> getAthaanModel({required String cityName}) async {
     var resopnse = await Dio().get(
         "https://api.aladhan.com/v1/calendarByCity/2023/5?city=$cityName&country=Syria&method=2");
 
